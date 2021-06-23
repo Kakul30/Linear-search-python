@@ -12,7 +12,6 @@ n=int(input("enter num of elements to add:"))
 for i in range(0, n):
     ele = int(input())
     list.append(ele)
-    list.sort()
 print(list)
 x = int(input("enter num to search"))
 if search(list, x):
