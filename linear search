@@ -1,0 +1,28 @@
+pos=-1
+def search(list,n):
+    i=0
+    for i in range (len(list)):
+        if list[i]==n:
+            globals()['pos']=i
+            return True
+
+    return False
+list=[]
+n=int(input("enter num of elements to add:"))
+for i in range(0, n):
+    ele = int(input())
+    list.append(ele)
+    list.sort()
+print(list)
+x = int(input("enter num to search"))
+if search(list, x):
+    print("element found at", pos + 1, "par")
+else:
+    print("element not found")
+y=int(input("enter num to remove"))
+
+if search(list,y):
+    list.remove(y)
+    print("Element removed updated list: ",list)
+else:
+    print("element not in list")
